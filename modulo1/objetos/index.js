@@ -73,13 +73,93 @@
 
 const dados = { 
     nome: "Barbara",
-    apelidos: ["Babi", "Babizinha", "baby"]
+    apelidos: ["babi", "babizinha", "baby"]
 }
 function apelidos1(dados) {
     apel1 = dados.apelidos[0]
     apel2 = dados.apelidos[1]
     apel3 = dados.apelidos[2]
-   
+    console.log(`Eu sou ${dados.nome}, mas pode me chamar de: ${apel1}, ${apel2}, ${apel3}.`)
 
 }
-console.log(`Eu sou ${dados.nome}, mas pode me chamar de:${dados.apelidos[0]}, ${dados.apelidos[1]}, ${dados.apelidos[2]}.`)
+apelidos1(dados)
+
+// b)
+
+const novosDados = {
+    ... dados,
+    apelidos: ["sol", "lua", "céu"]
+
+}
+apelidos1(novosDados)
+
+
+
+
+// Exercício 2:
+
+// a)
+
+const pessoa1 = {
+    nome: "João",
+    idade: 22,
+    profissão: "Marceneiro"
+}
+
+const pessoa2 = {
+    nome: "Pedro",
+    idade: 25,
+    profissão: "Pescador"
+}
+
+// b)
+
+// function dadosPessoais (pessoa1) {
+//     const dadosPessoa1 = [pessoa1.nome, pessoa1.nome.length,pessoa1.idade, pessoa1.profissão, pessoa1.profissão.length]
+//     console.log(dadosPessoa1)
+// }
+// dadosPessoais(pessoa1)
+// dadosPessoais(pessoa2)
+
+
+function dadosPessoais (x) {
+    const dadosPessoa1 = [x.nome, x.nome.length,x.idade, x.profissão, x.profissão.length]
+    console.log(dadosPessoa1)
+}
+dadosPessoais(pessoa1)
+dadosPessoais(pessoa2)
+
+
+// Exercício 3:
+
+// a) 
+
+const carrinho = []
+
+
+// b)  
+
+const fruta1 = {
+    nome: "Maça", 
+    Disponibilidade: true
+}
+const fruta2 = {
+    nome: "Mamão", 
+    Disponibilidade: true
+}
+const fruta3 = {
+    nome: "Melão", 
+    Disponibilidade: true
+}
+
+// c)
+
+function compras(x) {
+    carrinho.push(fruta1, fruta2, fruta3)
+    console.log(carrinho)
+}
+
+// d)
+
+compras(carrinho)
+
