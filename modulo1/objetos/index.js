@@ -163,3 +163,8 @@ function compras(x) {
 
 compras(carrinho)
 
+//********************************************
+
+// Desafio:
+
+//a)
