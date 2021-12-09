@@ -41,74 +41,97 @@
 //       quantidadeAtual++
 //     }
     
-//     ```
-    
-//     - 💡 Dica
-        
-//         <aside>
-//         ⭐ Se tiver dificuldade para entender esse exercício, rode as duas primeiras iterações do loop no [pytutor](http://pythontutor.com/javascript.html#mode=edit)
-        
-//         </aside>
-        
-//         Se o usuário digitar "V", a saída deve ser:
-        
-//         ```
-//         "Boa Tarde!"
-//         ```
 
 
 // Exercício de escrita de código
 
 // 1 - a)
 
-const numeroAnimais = Number(prompt("Quantos bichinhos você tem?"))
-let nomeAnimais = []
+// const numeroAnimais = Number(prompt("Quantos bichinhos você tem?"))
+// let nomeAnimais = []
 
-function animais (){
-    if (numeroAnimais <= 0){
-        console.log("Que pena! Você pode adotar um Pet!")
-    }else if(numeroAnimais>0){
-        for (let i = 1; i<= numeroAnimais; i++){
-          const nomesAnimais = prompt(`Digite o nome dos seus animais ${i}`)
-          nomeAnimais.push(nomesAnimais)
-        }
+// function animais (){
+//     if (numeroAnimais <= 0){
+//         console.log("Que pena! Você pode adotar um Pet!")
+//     }else if(numeroAnimais>0){
+//         for (let i = 1; i<= numeroAnimais; i++){
+//           const nomesAnimais = prompt(`Digite o nome dos seus animais ${i}`)
+//           nomeAnimais.push(nomesAnimais)
+//         }
 
-    }
-}
+//     }
+// }
 
-animais()
-console.log(nomeAnimais)
+// animais()
+// console.log(nomeAnimais)
 
+
+// Exercício 2:
+
+// a)
+
+// const arrayOriginal = [05, 06, 12, 86, 92]
+
+// function imprimeArrayOriginal(x){
+//     for(let i=0; i < x.length; i++){
+//         console.log(x[i])
+//     }
+// }imprimeArrayOriginal(arrayOriginal)
  
 
+// b)
 
+// const arrayOriginal = [05, 06, 12, 86, 92]
 
+// function imprimeArrayOriginal(x){
+//     for(let i=0; i < x.length; i++){
+//         console.log(x[i]/10)
+//     }
+// }imprimeArrayOriginal(arrayOriginal)
 
+// c)
 
+// const arrayOriginal = [05, 03, 06, 12, 21, 86, 92]
 
+// function imprimeArrayOriginal(x){
+//     for(let i=0; i < x.length; i++){
+//         if(x[i]%2 ===0){
+//          console.log(x[i])    
+//         }
+       
+//     }
+// }imprimeArrayOriginal(arrayOriginal)
 
+// d) 
 
+// const arrayOriginal = [05, 03, 06, 12, 21, 86, 92]
+// let novaArray = []
 
+// function imprimeNovaArray (x){
+//     for(i=0; i < x.length; i++){
+//         novaArray.push(`O elemento do índex ${i} é: ${arrayOriginal[i]}`)         
+//         }
+//        console.log(novaArray)    
+//     }
 
+// imprimeNovaArray(arrayOriginal)
 
+// e)
 
+const arrayOriginal = [05, 03, 06, 12, 21, 86, 92]
 
+function imprimeMaiorMenorValor (x){
+    valorMaximo = 0
+    valorMinimo = 100
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    for(i=0; i < x.length; i++){
+        if(x[i]>valorMaximo){
+            valorMaximo=x[i]  
+            
+        }else if(x[i]<valorMinimo)
+            valorMinimo=x[i]
+            
+    }
+}
+imprimeMaiorMenorValor(arrayOriginal)
+console.log(`O maior valor é: ${valorMaximo},e o menor valor é: ${valorMinimo}`)
