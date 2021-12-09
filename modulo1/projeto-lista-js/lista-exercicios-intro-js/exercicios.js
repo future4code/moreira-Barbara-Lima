@@ -98,7 +98,11 @@ return array[x-1]
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui
-
+let x = array.length
+array.splice()
+// array.push(array.splice(x-1,1))
+// array.push(array.splice(0,1)[0])
+// return array
 }
 
 // EXERCÍCIO 12
