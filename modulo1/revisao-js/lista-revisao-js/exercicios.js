@@ -13,11 +13,12 @@ function retornaTamanhoArray(array) {
 function retornaArrayInvertido(array) {
     
     return array.reverse()
-  
 }
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
+
+    
   
 }
 
