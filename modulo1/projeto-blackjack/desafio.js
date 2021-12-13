@@ -14,10 +14,15 @@
     console.log("Olá, Caro Amigo(a)... Seja Bem Vindo ao mundo do Blackjack!! Aqui tudo é possível... HAHAHAHAHAHA")
     
     if(confirm("Deseja iniciar uma partida!?")) {
+      const cartaUmUsuario   = comprarCarta()
+      const cartaDoisUsuario = comprarCarta()
+      
        while (cartaUmUsuario.numero && cartaDoisUsuario.numero === "A" ) {
 
             const cartaUmUsuario   = comprarCarta()
             const cartaDoisUsuario = comprarCarta()
+            console.log(cartaUmUsuario)
+            console.log(cartaDoisUsuario)
 
        }
             const cartaUmComputer  = comprarCarta()
@@ -27,9 +32,9 @@
             const pontuaçãoComputer= cartaUmComputer.valor + cartaDoisComputer.valor
 
 
-
-            console.log(`Usuário - cartas: ${cartaUmUsuario.texto} ${cartaDoisUsuario.texto} - Pontuação: ${pontuaçãoUsuario}.`)
-            console.log(`Usuário - cartas: ${cartaUmComputer.texto} ${cartaDoisComputer.texto} - Pontuação: ${pontuaçãoComputer}.`)
+      confirm (`Suas cartas são ${cartaUmUsuario.texto} ${cartaDoisUsuario.texto}. A carta revelada do Computador é${cartaUmComputer.texto} \n Deseja comprar mais uma carta?`)
+            // console.log(`Usuário - cartas: ${cartaUmUsuario.texto} ${cartaDoisUsuario.texto} - Pontuação: ${pontuaçãoUsuario}.`)
+            // console.log(`Computador - cartas: ${cartaUmComputer.texto} ${cartaDoisComputer.texto} - Pontuação: ${pontuaçãoComputer}.`)
       
                if (pontuaçãoUsuario > pontuaçãoComputer) {
 
