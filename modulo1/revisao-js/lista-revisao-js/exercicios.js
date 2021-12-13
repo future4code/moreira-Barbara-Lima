@@ -17,15 +17,33 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-
     
+
+    // return array.sort() 
   
 }
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  
+   const arrayPar = array.filter((num) => {
+       if(num % 2 === 0)
+       return num
+   })
+return arrayPar
 }
+
+
+
+
+// let novaArray = []
+//     for(i = 0; i < array.length; i++)
+//         if(array[i] %2 === 0) {
+//             novaArray.push(array[i])
+       
+//     }
+  
+//     return (novaArray)
+// }
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
