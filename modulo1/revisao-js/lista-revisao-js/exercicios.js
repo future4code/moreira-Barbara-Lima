@@ -77,13 +77,40 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
+  let numeroMaior 
+  let numeroMenor
+  let maiorDivisivel
+  let diferença
 
+    if(num1 > num2) {
+        numeroMaior = num1
+        numeroMenor = num2
+    }else{
+        numeroMaior = num2
+        numeroMenor = num1
+    }
+
+    maiorDivisivel = numeroMaior % numeroMenor === 0
+    diferença = numeroMaior - numeroMenor
+
+
+
+return {
+     maiorNumero: numeroMaior, 
+     maiorDivisivelPorMenor: maiorDivisivel,
+     diferenca: diferença
+}
 }
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-   
+
+  
 }
+
+retornaNPrimeirosPares(5)
+
+
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
