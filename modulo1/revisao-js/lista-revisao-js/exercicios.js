@@ -24,16 +24,18 @@ function retornaArrayOrdenado(array) {
 }
 
 // EXERCÍCIO 04
+
 function retornaNumerosPares(array) {
    const arrayPar = array.filter((num) => {
        if(num % 2 === 0)
        return num
+     
    })
 return arrayPar
+
 }
 
-
-
+// Desafio
 
 // let novaArray = []
 //     for(i = 0; i < array.length; i++)
@@ -46,9 +48,19 @@ return arrayPar
 // }
 
 // EXERCÍCIO 05
+
 function retornaNumerosParesElevadosADois(array) {
- 
+    const arrayParQuadrado = array.filter((num) => {
+        if(num % 2 === 0)
+        return num
+      
+    }).map((function (num) {
+        return num*num
+    }))
+    return arrayParQuadrado
 }
+
+ 
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
