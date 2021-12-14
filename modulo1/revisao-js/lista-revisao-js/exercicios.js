@@ -104,11 +104,17 @@ return {
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
+        const arrayDePares= []
+    
+        for(let i = 0; arrayDePares.length < n; i++) {
+            if(i % 2 === 0) {
+                arrayDePares.push(i)
+            }
+        }
+      return arrayDePares  
+    }
 
   
-}
-
-retornaNPrimeirosPares(5)
 
 
 
