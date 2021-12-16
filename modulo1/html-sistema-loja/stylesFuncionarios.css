@@ -29,6 +29,21 @@
     border-block-start-style: outset;
 }
 
+
+.listaFuncionarios h2{
+
+color: rgb(58, 31, 31);
+background-color: rgba(240, 128, 128, 0.453);
+
+}
+
+.funcionarios img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background-color: rgba(240, 128, 128, 0.453)
+}
+
 .linkRedesSociais p{
     color: rgb(143, 69, 69);
     background-color: rgba(240, 128, 128, 0.453);
