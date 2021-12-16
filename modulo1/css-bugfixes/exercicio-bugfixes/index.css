@@ -104,6 +104,9 @@ table {
     width: 60%;
 }
 
+td img {
+   width: 45px;  
+}
 td button {
     background-color: #fadf63;
     width: 150px;
