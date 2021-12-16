@@ -1,0 +1,70 @@
+.cabeçalho h1{
+    color: rgb(143, 69, 69);
+    font-size: 40px;
+    font-style: normal;
+    font-size-adjust: initial;
+    background-color: rgba(240, 128, 128, 0.453);
+   justify-content:space-between;
+    margin-top: 0px;
+}
+
+.cabeçalho p{
+    color: rgb(58, 31, 31);
+    font-size: 20px;
+    font-style: oblique;
+    font-size-adjust: initial;
+    background-color: rgba(240, 128, 128, 0.453);
+    white-space: nowrap;
+    justify-content:space-between;
+}
+
+.botoes a{
+    color: rgb(58, 31, 31);
+    font-size: 20px;
+    font-style: normal;
+    font-size-adjust: initial;
+    background-color: rgba(240, 128, 128, 0.453);
+    white-space: nowrap;
+    justify-content:space-between;
+    border-block-start-style: outset;
+}
+
+.listaEstoque h2{
+
+    color: rgb(58, 31, 31);
+    background-color: rgba(240, 128, 128, 0.453);
+    
+    }
+
+
+td img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    text-align: center; 
+    vertical-align: center;
+    }
+
+.alinhamento td tr {
+    text-align: center; 
+    vertical-align: middle;
+}
+
+.linkRedesSociais p{
+    color: rgb(143, 69, 69);
+    background-color: rgba(240, 128, 128, 0.453);
+
+}
+
+.linkRedesSociais2 td{
+    color: rgb(143, 69, 69);
+    background-color: rgba(240, 128, 128, 0.453);
+
+}
+.container img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background-color: rgba(240, 128, 128, 0.453)
+
+}
