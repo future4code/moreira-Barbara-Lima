@@ -32,7 +32,15 @@
             const pontuaçãoComputer= cartaUmComputer.valor + cartaDoisComputer.valor
 
 
+
+      if ( confirm (`Suas cartas são ${cartaUmUsuario.texto} ${cartaDoisUsuario.texto}. A carta revelada do Computador é${cartaUmComputer.texto} \n Deseja comprar mais uma carta?`)) {
+
+         const cartaTresUsuario   = comprarCarta()
+
+         
+      }
       confirm (`Suas cartas são ${cartaUmUsuario.texto} ${cartaDoisUsuario.texto}. A carta revelada do Computador é${cartaUmComputer.texto} \n Deseja comprar mais uma carta?`)
+
             // console.log(`Usuário - cartas: ${cartaUmUsuario.texto} ${cartaDoisUsuario.texto} - Pontuação: ${pontuaçãoUsuario}.`)
             // console.log(`Computador - cartas: ${cartaUmComputer.texto} ${cartaDoisComputer.texto} - Pontuação: ${pontuaçãoComputer}.`)
       
