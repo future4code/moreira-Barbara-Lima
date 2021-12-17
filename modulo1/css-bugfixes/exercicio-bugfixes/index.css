@@ -140,3 +140,13 @@ td button:hover {
 #back-button:hover {
     background-color: #635a3d
 }
+
+.container-do-search:active img {
+    opacity: 0.2;
+   
+}
+
+.container-do-search:hover img {
+    background-color: #e2dfd3;
+   
+}
