@@ -76,6 +76,7 @@ div>p:first-child {
 }
 
 #container-de-descricao>ol {
+    list-style-position: inside;
     padding: 15px 0px;
 }
 
