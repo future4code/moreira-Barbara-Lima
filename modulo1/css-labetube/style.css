@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+header {
+    background-color: #528585;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+header .nomePagina {
+    background-color: #528585;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#divBusca {
+    background-color: #528585;
+    display: flex;
+    border: solid 1px;
+    border-radius: 15px;
+    width: 500px;
+    text-align: center;
+}
+
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:95%;
+    color: antiquewhite;
+    
+  }
+
+  #lupaBusca{
+      width: 35px;
+      
+  }
+  body{
+      height: 100VH;
+  }
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: #c7e7e7;
+  height: 100%;
+
+
+}
+.imagens{
+    width: 250px;
+    height: 200px;
+    border: 1px solid black;
+
+}
+
+
+footer{
+    background-color: #528585;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+
+}
+
+main .video1{
+  
+    display: grid;
+    background-color: black;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    height: 250px;
+}
+main .video2{
+  
+    display: grid;
+    background-color: black;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    justify-content: center;
+    height: max-content;
+    width: max-content;
+} 
+ #posiçaoVideo{ 
+    display: flex; 
+    width: 400px;
+    align-content: center;
+
+ }
