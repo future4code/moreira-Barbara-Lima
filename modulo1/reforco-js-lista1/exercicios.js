@@ -120,8 +120,8 @@ function trocaPrimeiroEUltimo(array) {
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
   // implemente sua lógica aqui
 
-  string1 = string1.toUpperCase
-  string2 = string2.toUpperCase
+  string1 = string1.toUpperCase()
+  string2 = string2.toUpperCase ()
 
   return string1 === string2
 }
@@ -132,21 +132,26 @@ function checaRenovacaoRG() {
 
   const anoAtual = Number(prompt("Ano atual?"))
   const anoNascimento = Number(prompt("Ano Nascmento?"))
-  const anoEmissaoIdentidade = Number(prompt ("Ano Emissão da Identide?"))
+  const anoEmissaoIdentidade = Number(prompt ("Ano Emissão da Identidade?"))
   const idade = anoAtual - anoNascimento 
-  const tempoDeCNH = anoEmissaoIdentidade - anoAtual 
+  const tempoDeRG = anoAtual - anoEmissaoIdentidade
+  const renovaRG5Anos = idade <= 20 && tempoDeRG >=5
+  const renovaRG10Anos = idade > 20 && idade <= 50 && tempoDeRG >= 10
+  const renovaRG15Anos = idade >50 && tempoDeRG >= 15
 
-  if ( idade <= 20 && tempoDeCNH >= 5) {
-    console.log(tempoDeCNH >== 5) 
+  const verificaRenovacao = renovaRG5Anos || renovaRG10Anos || renovaRG15Anos
 
-  } 
-
-
+  console.log (verificaRenovacao)
 }
 
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
   // implemente sua lógica aqui
+  const cond1 = ano % 400 === 0
+  const cond2 = ano % 4 === 0 && ano % 100 !== 0
+
+  verificaAno = cond1 || cond2 
+  return verificaAno
 
 }
 
@@ -154,4 +159,16 @@ function checaAnoBissexto(ano) {
 function checaValidadeInscricaoLabenu() {
   // implemente sua lógica aqui
 
+  const maiorDeIdade = prompt("Você tem mais de 18 anos? sim ou nao")
+  const ensinoMedio = prompt("Você possui ensino médio completo?")
+  const disponibilidadeExclusiva = prompt("Você possui disponibilidade exclusiva durante os horários do curso?")
+
+  const verificaIdade = maiorDeIdade === "sim"
+  const verificaEscolaridade = ensinoMedio === "sim"
+  const verificaDisponibilidade = disponibilidadeExclusiva === "sim"
+
+
+  verificaInscrição = verificaIdade && verificaEscolaridade && verificaDisponibilidade
+
+  console.log(verificaInscrição)
 }
