@@ -1,0 +1,42 @@
+/* exercicio 4 */
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: grid;
+    background-color: hotpink;
+    grid-template-columns: 1fr 80px;
+    height: 40px;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+/* exercicio 5 */
+
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 40px 1fr 40px;
+}
+main{
+    background-color: limegreen;
+    display: grid;
+    grid-template-columns: 300px 1fr 200px;
+}
+
+footer{
+    background-color: lightseagreen;
+}
+
+/* exercicio 6 */
+
+#menu1{
+    background-color: mediumaquamarine;
+}
+section{
+    background-color: moccasin;
+}
+#menu2{
+    background-color:mediumpurple;
+}
