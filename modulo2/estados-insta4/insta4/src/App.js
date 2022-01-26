@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> 04a04baa4650823185f86c7e4705bde3c0af2ac2
 import React from 'react';
 import styled from 'styled-components'
 import Post from './components/Post/Post';
@@ -11,6 +14,32 @@ const MainContainer = styled.div`
 `
 
 class App extends React.Component {
+<<<<<<< HEAD
+  render() {
+    return (
+      <MainContainer>
+        <Post
+          nomeUsuario={'Paulinha'}
+          fotoUsuario={'https://picsum.photos/50/50'}
+          fotoPost={'https://picsum.photos/200/150'}
+        />
+        <Post
+          nomeUsuario={'Barbara'}
+          fotoUsuario={'https://picsum.photos/id/1010/367/267'}
+          fotoPost={'https://picsum.photos/536/354'}
+        />
+        <Post
+          nomeUsuario={'Marcela'}
+          fotoUsuario={'https://picsum.photos/id/1011/367/267'}
+          fotoPost={'https://picsum.photos/id/0/367/267'}
+        />
+      </MainContainer>
+    );
+  }
+}
+
+export default App;
+=======
 
   state= {
     listaDePosts: [{
@@ -102,3 +131,4 @@ export default App;
 
 
 
+>>>>>>> 04a04baa4650823185f86c7e4705bde3c0af2ac2
