@@ -35,12 +35,24 @@ class TelaListaUsuarios extends React.Component{
         .catch((erro) => {alert(`Algo deu errado!`)})
       
       }
+
+      deletarUsuario = (id) =>{
+          const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`
+          .delete(url, {headers:{Authorization: "barbara-costa-moreira"}})
+          .then((res) =>{
+              alert("Usuário deletado com sucesso!!")
+              this.getAllUsers()
+          })
+          .catch((err) => {
+              alert("Erro! Tente novamente!!!")
+          })
+      }
     render(){
         const usuariosLista = this.state.Usuarios.map((usuario) => {
                 return (
                 <div key={usuario.id}>
                     {usuario.name}
-                    <button> X </button>
+                    <button onClick= {() => this.deletarUsuario(usuario.id)}> X </button>
                 </div>
                 )
               })
