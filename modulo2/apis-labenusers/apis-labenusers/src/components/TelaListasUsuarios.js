@@ -2,14 +2,6 @@ import React from "react";
 import axios from "axios";
 import styled from 'styled-components';
 
-const url =
-  "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
-
-const headers = {
-  headers: {
-    Authorization: "barbara-costa-moreira"}
-};
-
 const CardUsuario = styled.div`
     border: 1px solid black;
     padding: 10px;
@@ -18,6 +10,16 @@ const CardUsuario = styled.div`
     display: flex;
     justify-content: space-between;
 `
+
+const url =
+  "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
+
+const headers = {
+  headers: {
+    Authorization: "barbara-costa-moreira"}
+};
+
+
 
 class TelaListaUsuarios extends React.Component{
 
@@ -32,13 +34,14 @@ class TelaListaUsuarios extends React.Component{
         axios
         .get(url, headers)
         .then((resposta) =>{this.setState({Usuarios: resposta.data})})
-        .catch((erro) => {alert(`Algo deu errado!`)})
+        .catch((erro) => alert(`Algo deu errado!`))
       
       }
 
       deletarUsuario = (id) =>{
-          const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`
-          .delete(url, {headers:{Authorization: "barbara-costa-moreira"}})
+          const url1 = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`
+          axios
+          .delete(url1, {headers:{Authorization: "barbara-costa-moreira"}})
           .then((res) =>{
               alert("Usuário deletado com sucesso!!")
               this.getAllUsers()
