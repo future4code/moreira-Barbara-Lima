@@ -1,0 +1,10 @@
+
+.App {
+    background-color: rgb(240, 194, 228);
+    font-family: sans-serif;
+    text-align: center;
+    padding-block-start: 10%;
+    border: 10px black;
+    border-radius: 50%;
+
+}
