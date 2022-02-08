@@ -22,6 +22,7 @@ const App = () => {
 
     return (
       <div className="App">
+        <h1>Escolha Seu PoKe Fav!</h1>
         <select onChange={changePokeName}>
           <option value={""}>Nenhum</option>
           {pokeList.map(pokemon => {
