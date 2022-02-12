@@ -1,0 +1,56 @@
+// import React, {useState, useEffect} from "react";
+import AppBar from "./components/AppBar";
+import axios from "axios"; 
+import styled from "styled-components";
+import ChooseProfilePage from "./components/ChooseProfilePage";
+import ChooseButton from "./components/ChooseButtons";
+import { useState } from "react";
+import AppHome from "./components/AppHome";
+import MatchListPage from "./components/MatchListPage";
+
+
+const BoxContainer = styled.div`
+  width: 500px;
+  height: 750px;
+  border: 1px solid black;
+  border-radius: 15px;
+  position: center;
+  margin: 5% 30%;
+  // background-image: url(https://media.istockphoto.com/vectors/black-and-white-checkered-abstract-background-vector-id485140380);
+`
+
+
+
+const App = () => {
+  const [tela, setTela] = useState('Escolher Perfis')
+
+  const trocaTela = ()=>{
+    switch(tela) {
+      case 'EscolhPerfil':
+        return < AppHome botao={irPraHome}/>
+      case 'SeusMatchs':
+        return <MatchListPage botao1={irParaMatch}/>
+      default: 
+        return <AppHome/>
+    }
+  }
+
+   const irPraHome = () => {
+     setTela('EscolhPerfil')
+   }
+
+   const irParaMatch = () => {
+    setTela('SeusMatchs')
+  }
+  return (
+   
+    <BoxContainer >
+      {trocaTela()}
+        {/* <AppHome/> */}
+    </BoxContainer>
+
+
+    
+  );
+}
+export default App
