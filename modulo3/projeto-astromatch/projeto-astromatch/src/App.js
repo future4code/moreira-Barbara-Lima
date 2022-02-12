@@ -22,11 +22,11 @@ const BoxContainer = styled.div`
 
 
 const App = () => {
-  const [tela, setTela] = useState('Escolher Perfis')
+  const [tela, setTela] = useState('SeusMatchs')
 
   const trocaTela = ()=>{
     switch(tela) {
-      case 'EscolhPerfil':
+      case 'EscolhePerfil':
         return < AppHome botao={irPraHome}/>
       case 'SeusMatchs':
         return <MatchListPage botao1={irParaMatch}/>
@@ -36,7 +36,7 @@ const App = () => {
   }
 
    const irPraHome = () => {
-     setTela('EscolhPerfil')
+     setTela('EscolhePerfil')
    }
 
    const irParaMatch = () => {
