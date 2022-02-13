@@ -28,9 +28,9 @@ const AppHome = (props) => {
             </div>
 
             <hr/>
-            <div>
+            {/* <div>
                 <ChooseButton/>
-            </div>
+            </div> */}
         </Home>
     )
 }

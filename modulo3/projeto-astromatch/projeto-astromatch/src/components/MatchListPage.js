@@ -12,7 +12,7 @@ const MatchListPage = (props) => {
       .then((res)=>{
         console.log("matchList")
         setPessoa(res.data.matches)})
-      .catch((err)=>{console.log(err)})
+      .catch((err)=>{console.log("Erro:",err)})
       }
 
   useEffect(() => {getMatches()},[])

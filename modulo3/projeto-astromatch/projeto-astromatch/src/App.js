@@ -46,11 +46,7 @@ const App = () => {
    
     <BoxContainer >
       {trocaTela()}
-        {/* <AppHome/> */}
     </BoxContainer>
-
-
-    
   );
 }
 export default App
