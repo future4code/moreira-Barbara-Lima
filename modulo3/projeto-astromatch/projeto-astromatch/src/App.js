@@ -1,9 +1,9 @@
 // import React, {useState, useEffect} from "react";
-import AppBar from "./components/AppBar";
+// import AppBar from "./components/AppBar";
 import axios from "axios"; 
 import styled from "styled-components";
-import ChooseProfilePage from "./components/ChooseProfilePage";
-import ChooseButton from "./components/ChooseButtons";
+// import ChooseProfilePage from "./components/ChooseProfilePage";
+// import ChooseButton from "./components/ChooseButtons";
 import { useState } from "react";
 import AppHome from "./components/AppHome";
 import MatchListPage from "./components/MatchListPage";
@@ -22,13 +22,13 @@ const BoxContainer = styled.div`
 
 
 const App = () => {
-  const [tela, setTela] = useState('SeusMatchs')
+  const [tela, setTela] = useState(1)
 
   const trocaTela = ()=>{
     switch(tela) {
-      case 'EscolhePerfil':
+      case 1:
         return < AppHome botao={irPraHome}/>
-      case 'SeusMatchs':
+      case 2:
         return <MatchListPage botao1={irParaMatch}/>
       default: 
         return <AppHome/>
@@ -36,11 +36,11 @@ const App = () => {
   }
 
    const irPraHome = () => {
-     setTela('EscolhePerfil')
+     setTela(1)
    }
 
    const irParaMatch = () => {
-    setTela('SeusMatchs')
+    setTela(2)
   }
   return (
    

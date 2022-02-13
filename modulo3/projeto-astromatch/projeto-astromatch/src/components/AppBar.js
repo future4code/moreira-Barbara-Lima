@@ -5,7 +5,7 @@ import App from "../App";
 const AppBar = () => {
   return (
     <div >
-        ASTROMATCH
+        <h1>ASTROMATCH</h1>
         <button>☺</button> 
     
     </div>

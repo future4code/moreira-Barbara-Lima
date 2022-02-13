@@ -3,6 +3,9 @@ import styled from "styled-components";
 import axios from "axios";
 import AppBar from "./AppBar";
 import ChooseButton from "./ChooseButtons";
+// import MatchListPage from "./MatchListPage";
+import ChooseProfilePage from "./ChooseProfilePage";
+
 
 
 const Home = styled.div`
@@ -11,23 +14,17 @@ const Home = styled.div`
 `
 
 const AppHome = (props) => {
-    // const url = () =>{
 
-    // }
     return (
         <Home>
             <div>        
                <AppBar/> 
-                <button onClick = {props.botao1}> Seus Matchs </button>
+                <button onClick =  {props.botao1}> Seus Matchs </button>
             </div>
             <hr/>
         
             <div>
-               
-
-
-
-
+                <ChooseProfilePage/>
             </div>
 
             <hr/>
