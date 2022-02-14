@@ -4,7 +4,13 @@ import sim from "./img/sim.png";
 import nao from "./img/nao.png"
 import axios from "axios";
 
-const Botao = styled.button`
+const BotaoX = styled.button`
+    // display: flex;
+    // border-radius: 3px;
+    height: 70px;
+    width: 70px;
+`
+const BotaoCor = styled.button`
     // display: flex;
     // border-radius: 3px;
     height: 70px;
@@ -25,24 +31,47 @@ const ContainerBotao = styled.div`
 
 
 const ChooseButton = (props) => {
+  const [allMatches, setAllMatches] = useState({})
+  const escolhePerfil = ()=>{
+    const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/barbara/person"
+    axios
+    .get(url)
+    .then((res) => {
+      setAllMatches(res.data.profile)
+    })
+    .catch((err)=>{
+      alert("Erro:", err)
+    })
+  }
 
   const escolhaLike =()=>{
     const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/barbara/choose-person"
-    const headers =  "Content-Type: application/json" 
     const body = {
-      "id": "71gMbZs2txS9LDvGK5Ew",
-      "choice": true
+      id: allMatches.id,
+      choice: true
     }
-
     axios
-    .post (url, headers, body)
-    .then((res)=>{props.escolhePerfil(res.data.profile)})
-    .catch((err)=>{console.log("Erro:", err)})
+    .post(url, body)
+    .then((res)=>{
+      escolhePerfil(res.data.profile)
+    })
+    .catch((err)=>{
+      console.log("Erro", err)
+    })
+  
   } 
   return (
     <ContainerBotao>
-        <Botao type="button" onClick={escolhaLike()}><Imagem src={sim}/> </Botao>
-        <Botao type="button" onClick={props.escolhaPerfil()}><Imagem src={nao}/> </Botao> 
+        <div>
+          <img src={allMatches.photo} alt="Fotos de Pessoas"/>
+        </div>
+        <div>
+          <h3>{allMatches.name}</h3> 
+          <h3>{allMatches.age}</h3>
+          <p>{allMatches.bio}</p>
+        </div>
+        <BotaoCor onClick={escolhaLike}><Imagem src={sim}/> </BotaoCor>
+        <BotaoX onClick={escolhePerfil}><Imagem src={nao}/> </BotaoX> 
     </ContainerBotao>
   );
 }
