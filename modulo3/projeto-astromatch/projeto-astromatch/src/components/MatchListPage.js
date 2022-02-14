@@ -5,8 +5,8 @@ import styled from "styled-components";
 const MatchListPage = (props) => {
   const [pessoa, setPessoa] = useState([])
     const getMatches = () =>{   
-      const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/daniel/matches"
-      const headers =  "Content-Type: application/json"
+      const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/barbara/matches"
+      const headers =  {"Content-Type": "application/json"}
       axios
       .get(url,headers)
       .then((res)=>{
@@ -21,12 +21,13 @@ const MatchListPage = (props) => {
     <div >
       <div>
         <div>
+        <button onClick={props.irHome}> home </button>
           {pessoa.map((pessoas) => {
             return <li key={pessoas.id}>{pessoas.name}</li>})}
         </div>
       </div>
       Deuu Match...Aproveite!
-      <button onClick={props.botao}> home </button>
+      
     </div>
   );
 }

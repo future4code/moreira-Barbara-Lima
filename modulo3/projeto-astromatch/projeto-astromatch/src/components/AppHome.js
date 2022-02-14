@@ -1,10 +1,7 @@
 import React, {useState, useEffect} from "react";
 import styled from "styled-components";
-import axios from "axios";
 import AppBar from "./AppBar";
-import ChooseButton from "./ChooseButtons";
-// import MatchListPage from "./MatchListPage";
-import ChooseProfilePage from "./ChooseProfilePage";
+import ChooseButtons from "./ChooseButtons"
 
 
 
@@ -19,18 +16,14 @@ const AppHome = (props) => {
         <Home>
             <div>        
                <AppBar/> 
-                <button onClick =  {props.botao1}> Seus Matchs </button>
+                <button onClick={props.irMatch}> Seus Matchs </button>
             </div>
             <hr/>
         
             <div>
-                <ChooseProfilePage/>
+                <ChooseButtons/>
             </div>
-
             <hr/>
-            {/* <div>
-                <ChooseButton/>
-            </div> */}
         </Home>
     )
 }

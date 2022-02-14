@@ -22,30 +22,45 @@ const BoxContainer = styled.div`
 
 
 const App = () => {
-  const [tela, setTela] = useState(1)
+  const [tela, setTela] = useState("pagHome")
+  const [botaoReset, setBotaoReset] = useState({})
 
   const trocaTela = ()=>{
-    switch(tela) {
-      case 1:
-        return < AppHome botao={irPraHome}/>
-      case 2:
-        return <MatchListPage botao1={irParaMatch}/>
+    switch(tela){
+      case "pagHome":
+        return <AppHome irMatch={irParaMatch}/>
+      case "pagMatch":
+        return <MatchListPage irHome={irPraHome}/>
       default: 
-        return <AppHome/>
+        return <AppHome/> 
     }
   }
 
    const irPraHome = () => {
-     setTela(1)
+     console.log("mudou")
+     setTela("pagHome")
    }
 
    const irParaMatch = () => {
-    setTela(2)
+    console.log("MUDOU")
+    setTela("pagMatch")
   }
+  const deletar = () => {
+    const url= "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/barbara/clear"
+    axios
+    .put(url)
+    .then((res)=>{
+      setBotaoReset(res.data)
+      console.log(res.data)
+    })
+    .catch((err)=>{console.log("Erro", err)})
+  }
+
   return (
    
     <BoxContainer >
       {trocaTela()}
+      <button onClick={deletar}>Resetar</button>
     </BoxContainer>
   );
 }
