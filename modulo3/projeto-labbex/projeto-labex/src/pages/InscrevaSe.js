@@ -6,7 +6,8 @@ const InscrevaSe = () =>{
   const navigate = useNavigate()
 
   const irParaEnviar = () => {
-    return alert ("Parabéns, Inscrição concluída!")
+    alert ("Parabéns, Inscrição concluída!")
+    navigate ("/")
   }
 
     return(

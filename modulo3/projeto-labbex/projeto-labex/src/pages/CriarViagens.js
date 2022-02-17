@@ -6,7 +6,7 @@ const CriarViagens = () =>{
   const navigate = useNavigate()
 
   const irParaDetalhesViagemCriada = () =>{
-    return alert("Viagem adicionada com sucesso!")
+    alert("Viagem adicionada com sucesso!")
     navigate ("/Detalhes")
   }
     return(
