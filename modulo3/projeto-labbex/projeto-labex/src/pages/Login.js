@@ -11,29 +11,28 @@ const Login = () =>{
 
   const navigate = useNavigate()
 
-  const pointlogin = () =>{
+
+  const irParaAdm = () => {
+    // console.log(email, senha)
     const url = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/login"
-    // const headers = {
-    //   headers = {
-    //     "Content-Type":"application/json"
-    //   }
-    // }
     const body = {
-      
       email: email,
       password: senha
-      
     }
 
   axios
-  .post(url, body)
-  .then((res)=>{console.log("Resposta:", res.data.token)})
-  .catch((err)=>{console.log(err)})
-  }
-
-  const irParaAdm = () => {
-  
-    navigate("/PainelAdm")
+    .post(url, body)
+    .then((res)=>{console.log("Resposta:", res.data)
+      if(res.request.upload===true){
+        navigate("/PainelAdm")
+      }else{
+        alert("Email ou Senha errados!")
+      }
+      // {res.data?navigate("/PainelAdm"):alert("Email ou Senha errados!")}
+    
+  })
+    .catch((err)=>{console.log(err.response)})
+    // navigate("/PainelAdm")
   }
 
   const onChangeEmail = (ev) => {
@@ -53,10 +52,12 @@ const Login = () =>{
         Login
         <hr/>
         <button onClick={() => navigate(-1)}>Voltar</button>
-        <button onClick={irParaAdm}>Entrar</button>
+        <button 
+        onClick={irParaAdm}>
+        Entrar</button>
         <hr/>
         <div>
-          <input
+          <input 
           placeholder="Email"
           type="email"
           value={email}

@@ -2,12 +2,12 @@ import axios from "axios";
 import React, {useState, useEffect} from "react";
 // import {BrowserRouter, Switch, Route} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import Card from "../components/Card";
 
 
 
 const ListaDeViagens = () =>{
-  const[viagem, setViagem] = useState([])
+  const[viagens, setViagem] = useState([])
 
   const navigate = useNavigate()
 
@@ -20,19 +20,30 @@ const ListaDeViagens = () =>{
     axios
     .get(url)
     .then((res)=>{console.log("Sua Lista", res)
-    setViagem(res.data.trip)})
+    setViagem(res.data.trips)})
     .catch((err)=>{console.log("Erro", err)})
   }
-
+  useEffect(() => {listaDeViagem()},[])
 
     return(
       <div>
-        ListaDeViagens
+        Lista de Viagens
         <hr/>
         <button onClick={() => navigate(-1)}> Voltar </button>
         <button onClick={irInscricao}> Inscreva-se </button>
         <hr/>
-        {viagem.map((viagens)=>{return <li key={viagens.id}>{viagens.name}</li>})}
+        
+        {viagens.map((viagem)=>{
+          return (
+           <Card 
+              key={viagem.id}
+              nome={viagem.planet} 
+              descricao={viagem.description}
+              duracao={viagem.durationInDays}
+              data={viagem.date}
+        /> 
+        )})}
+
       </div>
     )
   }
